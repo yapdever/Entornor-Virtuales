@@ -1,0 +1,8 @@
+# docker-compose.yml file
+services:
+  app-csv:
+    build: # Build the image using the Dockerfile in the current directory
+      context: . # The path to the directory containing the Dockerfile
+      dockerfile: Dockerfile # The path to the Dockerfile
+    volumes:
+      - .:/app # Mount the current directory to /app in the container
